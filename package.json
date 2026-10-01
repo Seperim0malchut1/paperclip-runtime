@@ -18,9 +18,11 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "vitest run",
+    "test:stress": "vitest run tests/runtime-stress.test.ts",
     "lint": "tsc --noEmit",
     "clean": "rm -rf dist coverage",
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "check": "npm run lint && npm test && npm run build"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
